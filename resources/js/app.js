@@ -1,7 +1,11 @@
 import './bootstrap';
 
-import {createApp} from 'vue'
+import { createApp } from 'vue'
 
-import App from './item/list.vue'
+import App from './layouts/App.vue';
 
-createApp(App).mount("#app")
+import router from './routes/index.js'
+
+createApp(App)
+  .use(router)
+  .mount("#app")
